@@ -1,11 +1,11 @@
 #Lunch and Learn: Viz on React.js
 
-#Setup
+##Setup
 ```
 $ npm install
 ```
 
-#Run Dev Server
+##Run Dev Server
 ```
 $ webpack-dev-server --progress --colors
 ```
