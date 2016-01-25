@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Narrative extends React.Component {
   render() {
@@ -6,4 +7,4 @@ class Narrative extends React.Component {
   }
 }
 
-React.render(<Narrative/>, document.getElementById('narrative'));
+ReactDOM.render(<Narrative/>, document.getElementById('narrative'));
