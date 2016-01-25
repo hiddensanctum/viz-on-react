@@ -1,0 +1,1 @@
+import VictoryChart from './src/victory-chart.jsx';
