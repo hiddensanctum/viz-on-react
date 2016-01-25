@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { VictoryPie } from 'victory';
 
-class PieChart extends Component {
+var PieChart = React.createClass({
   render() {
     return (
       <VictoryPie />
     );
   }
-}
+});
 
 render(<PieChart />, document.getElementById('pie-chart'));

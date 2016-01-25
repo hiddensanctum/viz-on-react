@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-class Narrative extends Component {
+var Narrative = React.createClass({
   render() {
     return <h1>Welcome to Visualizations on React.js</h1>
   }
-}
+});
 
-ReactDOM.render(<Narrative/>, document.getElementById('narrative'));
+render(<Narrative/>, document.getElementById('narrative'));
