@@ -1,1 +1,1 @@
-import VictoryChart from './src/victory-chart.jsx';
+import Narrative from './src/narrative.jsx';
