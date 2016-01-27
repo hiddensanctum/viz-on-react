@@ -1,9 +1,10 @@
 // Mocking window and document object:
 require('testdom')('<html><body></body></html>')
 
+var jsdom = require('mocha-jsdom');
+var assert = require('assert');
 var React = require('react');
 var TestUtils = require('react-addons-test-utils');
-var assert = require('assert');
 
 describe('Testing Narrative Component', function() {
   var Narrative = require('../src/narrative.jsx');
