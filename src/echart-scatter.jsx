@@ -2,13 +2,26 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import echarts from 'echarts';
 
-class EchartLine extends React.Component {
+class EChartScatter extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
   createChart() {
+    var ChartSettings = {
+      defaultOptions: {
+        toolbox: {
+          show: false
+        }
+      },
+      theme: {
+        textStyle: {
+          fontFamily: 'Helvetica Neue‘, Arial, Verdana, sans-serif'
+        }
+      }
+    };
+
     this.chart = echarts.init(React.findDOMNode(this), ChartSettings.theme);
     this.chart.setOption(ChartSettings.defaultOptions);
     this.updateChart(this.props);
@@ -116,7 +129,7 @@ class EchartLine extends React.Component {
   }
 }
 
-EchartLine.propTypes = {
+EChartScatter.propTypes = {
   seriesArray: React.PropTypes.array.isRequired,
   height: React.PropTypes.number.isRequired,
   width: React.PropTypes.number.isRequired,
@@ -125,44 +138,4 @@ EchartLine.propTypes = {
   showZoom: React.PropTypes.bool
 }
 
-var ChartSettings = {
-  defaultOptions: {
-    toolbox: {
-      show: false
-    }
-  },
-  theme: {
-    textStyle: {
-      fontFamily: 'Helvetica Neue‘, Arial, Verdana, sans-serif'
-    }
-  }
-};
-
-var sampling = [];
-
-for (let i = 0; i < 50; i++) {
-  sampling.push([i/10, Math.random() * i / 10]);
-}
-
-var height = 400;
-var width = height * 1.6;
-render( < EchartLine seriesArray = {
-    [{
-      name: 'Developers',
-      data: sampling
-    }]
-  }
-  width = {
-    width
-  }
-  height = {
-    height
-  }
-  xLabel = "# of Custom Projects"
-  yLabel = "Cups of Coffee Consummed"
-  title = "Custom Projects in relation to Coffee Consumption"
-  showZoom = {
-    true
-  }
-  />, document.getElementById('scatter')
-);
+module.exports = EChartScatter;

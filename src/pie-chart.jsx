@@ -26,14 +26,17 @@ class PieChart extends React.Component {
 
   render() {
     return (
-      <VictoryPie
-        data={this.state.data}
-        animate={{velocity: 0.01}}
-        innerRadius={80}
-        padAngle = {5}
-        colorScale={['#eff3ff','#bdd7e7','#6baed6','#3182bd','#08519c']}/>
+      <div>
+        <VictoryPie
+          data={this.state.data}
+          animate={{velocity: 0.1}}
+          innerRadius={80}
+          padAngle = {5}
+          colorScale={['#eff3ff','#bdd7e7','#6baed6','#3182bd','#08519c']}
+          />
+      </div>
     );
   }
 }
 
-render(<PieChart />, document.getElementById('pie-chart'));
+module.exports = PieChart;
