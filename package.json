@@ -4,7 +4,7 @@
   "description": "lightweight react starter kit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel/register"
   },
   "author": "James Chuang",
   "license": "ISC",
@@ -19,6 +19,11 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "jsdom": "^7.2.2",
+    "mocha": "^2.4.3",
+    "mocha-jsdom": "^1.0.0",
+    "react-addons-test-utils": "^0.14.6",
+    "testdom": "^2.0.0",
     "webpack": "^1.12.12"
   }
 }
